@@ -1,0 +1,27 @@
+<div class="container">
+  {{#if productos}}
+    <table class="table">
+      <legend>Lista de Producto</legend>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each productos}}
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.thumbnail}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <h2>No hay productos cargados</h2>
+  {{/if}}
+</div>
